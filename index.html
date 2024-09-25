@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"></head>
+<body>
+    <div class="container">
+        <h1>Crop Recommendation System</h1>
+        <form id="cropForm">
+            
+            <label for="temperature">Temperature:</label>
+            <input type="float" id="temperature" name="temperature" required>
+
+            <label for="humidity">Humidity:</label>
+            <input type="float" id="humidity" name="humidity" required>
+
+            <label for="ph">pH Level:</label>
+            <input type="float" id="ph" name="ph" required>
+
+            <label for="rainfall">Rainfall (mm):</label>
+            <input type="float" id="rainfall" name="rainfall" required>
+
+            <button type="submit">Recommend Crop</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
